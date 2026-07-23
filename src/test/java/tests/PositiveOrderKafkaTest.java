@@ -3,10 +3,8 @@ package tests;
 import dto.TestOrderData;
 import org.example.kafka.dto.OrderEvent;
 import org.example.kafka.dto.OrderResult;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
-import tests.BaseKafkaTest;
 import utils.CsvReader;
 
 import java.time.Duration;
