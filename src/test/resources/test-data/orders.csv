@@ -1,0 +1,6 @@
+orderId,customer,amount,status
+1,Alex,500,ACCEPTED
+2,John,1000,ACCEPTED
+3,Mike,1,ACCEPTED
+4,Bob,-100,REJECTED
+5,Tom,0,REJECTED
