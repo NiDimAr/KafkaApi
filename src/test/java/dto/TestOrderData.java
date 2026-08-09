@@ -23,14 +23,4 @@ public class TestOrderData {
         this.expectedStatus = expectedStatus;
     }
 
-
-    @Override
-    public String toString() {
-        return "OrderTestData{" +
-                "orderId='" + orderId + '\'' +
-                ", customer='" + customer + '\'' +
-                ", amount=" + amount +
-                ", expectedStatus='" + expectedStatus + '\'' +
-                '}';
-    }
 }

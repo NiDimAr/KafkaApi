@@ -10,7 +10,7 @@ import utils.CsvReader;
 import java.time.Duration;
 
 import static org.awaitility.Awaitility.await;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NegativeOrderKafkaTest extends BaseKafkaTest {
     static java.util.stream.Stream<TestOrderData> negativeOrders() {

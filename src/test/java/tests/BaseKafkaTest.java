@@ -1,6 +1,7 @@
 package tests;
 
 import config.KafkaTestContainerConfig;
+import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.example.kafka.KafkaApplication;
@@ -35,7 +36,7 @@ public abstract class BaseKafkaTest {
     protected OrderProducer producer;
 
 
-    protected org.apache.kafka.clients.consumer.Consumer<String, OrderResult> consumer;
+    protected Consumer<String, OrderResult> consumer;
 
 
 
