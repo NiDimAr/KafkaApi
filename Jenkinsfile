@@ -1,23 +1,22 @@
 pipeline {
     agent any
+    tools { maven 'Maven3' }
+
+    environment {
+        TESTCONTAINERS_HOST_OVERRIDE = 'host.docker.internal'
+    }
 
     stages {
-        stage('Checkout') {
+        stage('Test') {
             steps {
-                checkout scm
+                sh 'mvn clean test'
             }
         }
+    }
 
-        stage('Build') {
-            steps {
-                sh 'mvn clean compile'
-            }
-        }
-
-        stage('Tests') {
-            steps {
-                sh 'mvn test'
-            }
+    post {
+        always {
+            allure results: [[path: 'target/allure-results']]
         }
     }
 }
