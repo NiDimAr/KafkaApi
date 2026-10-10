@@ -16,7 +16,7 @@ pipeline {
 
     post {
         always {
-            allure results: [[path: 'target/allure-results']]
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
     }
 }
